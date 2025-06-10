@@ -12,7 +12,7 @@ app.get('/api/hercai', async (req, res) => {
   if (!message) return res.status(400).json({ error: 'Missing message query' });
 
   try {
-    const { data } = await axios.get(`https://hercai.onrender.com/v3/hercai?question=${encodeURIComponent(message)}`);
+    const { data } = await axios.get(`https://uzairrajput-ytdl-api-master.onrender.com/v3/hercai?question=${encodeURIComponent(message)}`);
     res.json({ response: data.reply });
   } catch (err) {
     res.status(500).json({ error: 'Something went wrong with Hercai API' });
